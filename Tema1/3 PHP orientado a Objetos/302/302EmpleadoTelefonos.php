@@ -64,6 +64,10 @@
 
             // Opcion 1
             public function listarTelefonos(): string {
+                if (empty($this->telefonos)) {
+                    return '';
+                }
+
                 $todosTelefonos = '';
                 foreach ($this->telefonos as $telefono) {
                     $todosTelefonos .= $telefono . ', ';
@@ -75,6 +79,10 @@
             // Opcion 2: Con implode
             public function listarTelefonos2(): string {
                 return implode(", ", $this->telefonos);
+            }
+
+            public function vaciarTelefonos(): void {
+                $this->telefonos = [];
             }
 
         }
@@ -91,6 +99,10 @@
         echo "<br>Teléfonos con forearch: " . $empleado1->listarTelefonos();
         echo "<br>Teléfonos con implode: " . $empleado1->listarTelefonos2();
     
+        $empleado1->vaciarTelefonos();
+        echo "<br>";
+        $empleado1->listarTelefonos();
+        
     ?>
 
 
