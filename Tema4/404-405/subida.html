@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subida de archivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #919191;
+        }
+        form {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="subida.php" method="post" enctype="multipart/form-data">
+            <h3 class="text-center mb-3">Subida de Archivo</h3>
+
+            <div class="form-group mb-3">
+                <label for="archivo">Selecciona un archivo:</label>
+                <input type="file" class="form-control" id="archivo" name="archivo" required accept=".jpg, .jpeg, .png, .gif, .webp">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="anchura">Anchura:</label>
+                <input type="number" class="form-control" id="anchura" name="anchura" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="altura">Altura:</label>
+                <input type="number" class="form-control" id="altura" name="altura" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" name="btnSubir" value="Subir">Subir</button>
+        </form>
+    </div>
+</body>
+</html>
