@@ -1,0 +1,64 @@
+<!-- 402formulario.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>402 - Formulario</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; }
+    fieldset { margin-bottom: 1rem; }
+    label { display: inline-block; margin: .25rem 0; }
+  </style>
+</head>
+<body>
+  <h2>402 - Formulario</h2>
+
+  <form action="402formulario.php" method="post">
+    <label>Nombre y apellidos:
+      <input type="text" name="nombre" required />
+    </label><br><br>
+
+    <label>Email:
+      <input type="email" name="email" required />
+    </label><br><br>
+
+    <label>URL página personal:
+      <input type="url" name="url" placeholder="https://ejemplo.com" />
+    </label><br><br>
+
+    <fieldset>
+      <legend>Sexo</legend>
+      <label><input type="radio" name="sexo" value="M" required /> Masculino</label>
+      <label><input type="radio" name="sexo" value="F" /> Femenino</label>
+      <label><input type="radio" name="sexo" value="Otro" /> Otro</label>
+    </fieldset>
+
+    <label>Número de convivientes en el domicilio:
+      <input type="number" name="convivientes" min="0" value="0" required />
+    </label><br><br>
+
+    <fieldset>
+      <legend>Aficiones (elige las que apliquen)</legend>
+      <label><input type="checkbox" name="aficiones[]" value="Deporte" /> Deporte</label>
+      <label><input type="checkbox" name="aficiones[]" value="Lectura" /> Lectura</label>
+      <label><input type="checkbox" name="aficiones[]" value="Cine" /> Cine</label>
+      <label><input type="checkbox" name="aficiones[]" value="Viajar" /> Viajar</label>
+      <label><input type="checkbox" name="aficiones[]" value="Música" /> Música</label>
+      <label><input type="checkbox" name="aficiones[]" value="Videojuegos" /> Videojuegos</label>
+    </fieldset>
+
+    <label>Menú favorito (selección múltiple con Ctrl/⌘):
+      <select name="menu[]" multiple size="6" required>
+        <option value="Italiano">Italiano</option>
+        <option value="Mexicano">Mexicano</option>
+        <option value="Japonés">Japonés</option>
+        <option value="Vegetariano">Vegetariano</option>
+        <option value="Mediterráneo">Mediterráneo</option>
+        <option value="Asiático">Asiático</option>
+      </select>
+    </label><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
