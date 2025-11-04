@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de inicio de sesión</title>
+    <link rel="stylesheet" href="libraries/bootstrap-5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <form action="411login.php" method="post">
-        
-    </form>
-</body>
-</html>
-
-
