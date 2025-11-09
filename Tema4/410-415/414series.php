@@ -5,25 +5,28 @@
 
 <body>
     <div class="main-container">
-        <div class="btn-group" role="group">
-            <a href="412peliculas.php">
-                <button type="button" class="btn btn-secondary">Peliculas</button>
-            </a>
-            <button type="button" class="btn btn-secondary" disabled>Series</button>
-        </div>
-        
-        <h3 class="text-left">Bienvenido <?= $_SESSION['usuario'] ?></h3>
+        <?php include "includes/menu.php" ?>
+
+        <?php        
+            if (isset($_COOKIE['series'])) {
+                $listaSeries = json_decode($_COOKIE['series'], true);
+            } else {
+                $listaSeries = [
+                    'El señor de los anillos',
+                    'Los hermanos Bryan', 
+                    'Los vengadores serie'
+                ];
+            }
+        ?>
         
         <h1 class="text-center">Listado de series</h1>
         <ul class="list-group">
-            <li class="list-group-item">El señor de los anillos</li>
-            <li class="list-group-item">Los hermanos Bryan</li>
-            <li class="list-group-item">Los vengadores serie</li>
+            <?php foreach ($listaSeries as $serie): ?>
+                <li class="list-group-item"><?= $serie ?></li>
+            <?php endforeach; ?>
         </ul>
 
-        <a href="413logout.php">
-            <button type="button" class="btn btn-danger mt-2">Cerrar sesión</button>
-        </a>
+       <?php include "includes/logout.php" ?>
     </div>
 </body>
 </html>
