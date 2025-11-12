@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<?php $archivo = basename(__FILE__); ?>
-
-<div class="btn-group" role="group">
-            <a href="412peliculas.php">
-                <button type="button" class="btn btn-link">Peliculas</button>
-            </a>
-            <button 
-                type="button" 
-                class="btn btn-secondary"
-                <?php 
-                if ($archivo == '414series.php') {
-                    
-                } ?>    
-            >Series</button>
-</div>
-=======
 <?php
     $current = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)); 
     $onPeliculas = ($current === '412peliculas.php');
@@ -39,4 +22,3 @@
 
   </div>
 </div>
->>>>>>> d967241735b67040818e9340f04ad70d9fd39066
