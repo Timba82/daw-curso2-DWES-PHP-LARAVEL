@@ -1,10 +1,8 @@
-<?php
-    $archivo = basename(__FILE__);
-?>
+<?php $archivo = basename(__FILE__); ?>
 
 <div class="btn-group" role="group">
             <a href="412peliculas.php">
-                <button type="button" class="btn btn-secondary">Peliculas</button>
+                <button type="button" class="btn btn-link">Peliculas</button>
             </a>
             <button 
                 type="button" 

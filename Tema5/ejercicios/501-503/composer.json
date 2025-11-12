@@ -1,0 +1,16 @@
+{
+    "name": "dwes/monologos",
+    "autoload": {
+        "psr-4": {
+            "Dwes\\Monologos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fran"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.9"
+    }
+}
