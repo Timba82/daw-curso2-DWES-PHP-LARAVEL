@@ -1,0 +1,16 @@
+{
+    "name": "fgilm16/531",
+    "autoload": {
+        "psr-4": {
+            "Fgilm16\\531\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "franGil"
+        }
+    ],
+    "require": {
+        "fabpot/goutte": "^4.0"
+    }
+}
