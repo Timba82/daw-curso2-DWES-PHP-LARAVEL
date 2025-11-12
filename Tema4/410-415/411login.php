@@ -16,6 +16,23 @@ if (isset($_POST['enviar'])) {
             $error = "";
             session_start();
             $_SESSION['usuario'] = $usuario;
+            if (!isset($_COOKIE['peliculas'])) {
+                $listaPeliculas = [
+                    'El quinto elemento', 
+                    'Matrix', 
+                    'Los puentes de Madison'
+                ];
+                setcookie("peliculas", json_encode($listaPeliculas), time() + 3600, "/");
+            }
+            if (!isset($_COOKIE['series'])) {
+                $listaSeries = [
+                    'El señor de los anillos',
+                    'Los hermanos Bryan', 
+                    'Los vengadores serie'
+                ];
+                setcookie('series', json_encode($listaSeries), time() + 3600, "/");
+            }
+
             include("412peliculas.php");
         } else {
             // En el caso de error mostramos los errores
